@@ -220,7 +220,7 @@ function renderDemo() {
       }
       dust.stream("demo", context)
           .on('data', function(data) {
-            $('#output-text').append(dust.escapeHtml(data));
+            $('#output-text').append(data);
           })
           .on('end', function() {
             setOkay('#input-context');
